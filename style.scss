@@ -131,8 +131,19 @@ pre
     color: #AB9BA9;
 }
 
-.sidebar-nav li a:hover {
-    text-decoration: none;
+li.li-no-hover:hover
+{
+    background: #4C9689 !important;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+li.li-hover:hover
+{
     background: #3E313C;
     -moz-border-radius-topleft: 10px;
     -moz-border-radius-topright: 10px;
@@ -152,6 +163,8 @@ pre
     -webkit-border-radius: 10px 10px 0px 0px;
     border-radius: 5px 5px 5px 5px;
 }
+
+
 
 .sidebar-nav > .sidebar-brand {
     height: 65px;
@@ -177,10 +190,12 @@ pre
     font-size: 14px;
     font-weight: bold;
     color: #B3A1AE;
+    pointer-events: none;
+    cursor: default;
 }
 
 .sidebar-nav > .sidebar-list-name a:hover { /* TBD */
-    color: #fff;
+    color: #B3A1AE;
     background: none;
 }
 

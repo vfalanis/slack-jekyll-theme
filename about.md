@@ -1,6 +1,7 @@
 ---
 layout: page
 title: about
+description: Stalk me now
 permalink: /about/
 ---
 

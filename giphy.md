@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Giphy
+title: giphy
+description: Check out this awesome plugin
 permalink: /giphy/
 ---
 
