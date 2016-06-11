@@ -47,7 +47,7 @@
             </li>
             {% for category in site.categories %}
                 <li>
-                    <a href="#"><i class="fa fa-circle-thin" aria-hidden="true"></i> {{ category | first }}</a>
+                    <a href="#"><i class="fa fa-heart green fa-fw" aria-hidden="true"></i> {{ category | first }}</a>
                 </li>
             {% endfor %}
         </ul>
@@ -66,6 +66,17 @@
                 
     </div>
     <!-- /#sidebar-wrapper -->
+    
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <!-- /#wrapper -->
