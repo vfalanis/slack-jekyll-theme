@@ -26,17 +26,23 @@
         
         
         <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
+            <li class="sidebar-brand" style="display:block">
+                <a href="#"><i class="fa fa-search" style="font-size:20px; color:#AB9BA9;float:right;line-height:60px;" aria-hidden="true"></i></a>
+                <a href="#" style="float:left">
                     {{ site.url }}
                 </a>
+                
             </li>
             <li class="sidebar-list-name">
                 <a href="#">NAVIGATION</a>
             </li>
             {% for my_page in site.pages %}
                 {% if my_page.title %}
-                    <li><a href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
+                    {% if page.url == my_page.url %}
+                        <li><a class="active white" href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
+                    {% else %}
+                        <li><a href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </ul>
@@ -58,8 +64,8 @@
             <li class="boldy">
                 <a href="#">{{ site.alias }}</a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-circle green status" aria-hidden="true"></i> online</a>
+            <li class="status">
+                <a href="#"><i class="fa fa-circle green status fa-fw" aria-hidden="true"></i>online</a>
             </li>
         </ul>
         </div>
