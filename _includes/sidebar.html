@@ -1,0 +1,72 @@
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        
+        <div class="social-bar">
+            <ul class="social-icons">
+                <li>
+                    <a href="http://facebook.com/{{ site.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="http://github.com/{{ site.github }}"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://mx.linkedin.com/in/{{ site.linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="http://codepen.io/{{ site.codepen }}"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="http://dribbble.com/{{ site.dribbble }}"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    {{ site.url }}
+                </a>
+            </li>
+            <li class="sidebar-list-name">
+                <a href="#">NAVIGATION</a>
+            </li>
+            {% for my_page in site.pages %}
+                {% if my_page.title %}
+                    <li><a href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        
+        <ul class="sidebar-nav">
+            <li class="sidebar-list-name">
+                <a href="#">TAGS</a>
+            </li>
+            {% for category in site.categories %}
+                <li>
+                    <a href="#"><i class="fa fa-circle-thin" aria-hidden="true"></i> {{ category | first }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <div class="profile">
+            
+        <ul class="sidebar-profile-container">
+            <li class="boldy">
+                <a href="#">{{ site.alias }}</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-circle green status" aria-hidden="true"></i> online</a>
+            </li>
+        </ul>
+        </div>
+                
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+

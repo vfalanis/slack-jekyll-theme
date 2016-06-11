@@ -1,0 +1,242 @@
+---
+---
+
+/* ------------ Core Style -------------- */
+
+body
+{
+    font-family: Lato;
+}
+
+.green
+{
+    color:#4C9689;
+}
+
+i
+{
+    text-indent: 0;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 280px;
+}
+
+
+/* --------------- Sidebar --------------- */
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 280px;
+    width: 0;
+    height: 100%;
+    margin-left: -280px;
+    overflow-y: auto;
+    background: #483046;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 280px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -280px;
+}
+
+            /* --------------- Sidebar Nav --------------- */
+.sidebar-nav {
+    width: 270px;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 30px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #AB9BA9;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    background: #3E313C;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+
+    text-decoration: none;
+    background: #4C9689;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar-nav > .sidebar-brand a:hover { /* TBD */
+    color: #fff;
+    background: none;
+}
+
+.sidebar-nav > .sidebar-list-name a { /* Force uppercase */
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar-nav > .sidebar-list-name a:hover { /* TBD */
+    color: #fff;
+    background: none;
+}
+
+    /* --------------- Profile Footer --------------- */
+
+.profile
+{
+    height: 80px;
+    background-color: #3A2736;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar-profile-container {
+    position: absolute;
+    top: 0;
+    width: inherit;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    list-style: none;
+}
+
+.boldy a {
+    font-size: 18px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.sidebar-profile-container li {
+    text-indent: 20px;
+    line-height: 30px;
+}
+
+.sidebar-profile-container li a {
+    display: block;
+    text-decoration: none;
+    color: #AB9BA9;
+}
+
+
+    /* --------------- Social Bar --------------- */
+
+.social-bar
+{
+
+    width: 60px;
+    height: 100%;
+    background-color: #2E202D;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    z-index: 10;
+}
+
+.social-icons
+{
+    list-style: none;
+    
+    font-size: 30px;
+    line-height: 70px;
+    margin-left: -40px;
+}
+
+.social-icons a
+{
+    color: #796E78;
+}
+
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 280px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 280px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+

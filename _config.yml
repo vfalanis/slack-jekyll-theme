@@ -1,0 +1,17 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "url.com" # the base hostname & protocol for your site
+alias: username
+
+# Social icons
+facebook: username
+linkedin: username
+github: username
+dribbble: username
+codepen: username
+
+
+# Build settings
+markdown: kramdown
