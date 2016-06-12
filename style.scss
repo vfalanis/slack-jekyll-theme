@@ -109,6 +109,7 @@ pre
     position: absolute;
     padding: 15px;
     display: none;
+    overflow-x: hidden;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -259,14 +260,21 @@ li.li-hover:hover
     width: 60px;
     height: 100%;
     background-color: #2E202D;
-    position: absolute;
+    position: fixed; /* ojo antes absolute */
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
     text-align: center;
     z-index: 10;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
+
+
+
 
 .social-icons
 {
@@ -383,6 +391,14 @@ li.li-hover:hover
         position: relative;
         margin-right: 0;
     }
+}
+
+@media(max-width:766px) {
+    .container-fluid
+    {
+        padding-left:70px;
+    }
+    
 }
 
 
