@@ -4,17 +4,32 @@
   {% include head.html %}
 
   <body>
-
+      
     {% include sidebar.html %}
       
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+      
 
     <!-- Bootstrap Core JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      
 
+            
   </body>
 
-  <footer></footer>
-
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+<script>
+    $(document).ready(function(){
+    $('#page-content-wrapper').fadeIn();
+});
+    </script>
+    
+    
 </html>

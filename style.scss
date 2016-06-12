@@ -7,7 +7,9 @@ body
 {
     font-family: Lato;
     color: #57565A;
+    
 }
+
 
 .green
 {
@@ -30,6 +32,7 @@ i
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
 }
 
 #wrapper.toggled {
@@ -78,6 +81,8 @@ pre
     height:40px;
 }
 
+
+
 /* --------------- Sidebar --------------- */
 
 #sidebar-wrapper {
@@ -103,6 +108,7 @@ pre
     width: 100%;
     position: absolute;
     padding: 15px;
+    display: none;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -324,16 +330,6 @@ li.li-hover:hover
     list-style: none;
 }
 
-.post-container li
-{
-    float: left;
-}
-
-.post-container h2
-{
-    display: inline;
-}
-
 .post-meta
 {
     color:#9E9EA6;
@@ -357,7 +353,6 @@ li.li-hover:hover
 
 .post-mark
 {
-    color:#82D2E1;
     font-size: 20px;
 }
 

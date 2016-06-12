@@ -27,7 +27,7 @@
         
         <ul class="sidebar-nav">
             <li class="sidebar-brand" style="display:block">
-                <a href="#"><i class="fa fa-search" style="font-size:20px; color:#AB9BA9;float:right;line-height:60px;" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-search" style="font-size:20px; color:#AB9BA9;float:right;line-height:60px;" aria-hidden="true"></i></a>
                 <a href="#" style="float:left">
                     {{ site.url }}
                 </a>
@@ -40,8 +40,10 @@
                 {% if my_page.title %}
                     {% if page.url == my_page.url %}
                         <li class="li-no-hover"><a class="white active" href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
+                    {% elsif page.layout == "post" and my_page.title == "blog"  %}
+                        <li class="li-hover"><a class="white active" href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
                     {% else %}
-                        <li class="li-hover"><a href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
+                        <li class="li-hover"><a class="" href="{{ my_page.url | prepend: site.baseurl }}"># {{ my_page.title }}</a></li>
                     {% endif %}
                 {% endif %}
             {% endfor %}

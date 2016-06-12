@@ -6,6 +6,7 @@ layout: default
 
   <h1> # posts</h1>
   <p>30 posts | Notes for my future self </p>
+   <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>-->
   <hr>
     
 </div>
@@ -13,11 +14,28 @@ layout: default
   <div class="post-container">
   <ul class="post-list">
     {% for post in site.posts %}
+       {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
       <li>
-        <h2>
-        <i class="fa fa-square post-mark fa-fw" aria-hidden="true"></i><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} >> </span><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+          {% if post_count contains '1' %}
+            <h2><i class="fa fa-square post-mark fa-fw" style="color:#82D2E1" aria-hidden="true"></i><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} >> </span><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          
+          {% elsif post_count contains '2' %}
+            <h2><i class="fa fa-square post-mark fa-fw" style="color:#EDB722" aria-hidden="true"></i><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} >> </span><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          
+          {% elsif post_count contains '3' %}
+            <h2><i class="fa fa-square post-mark fa-fw" style="color:#E5186F" aria-hidden="true"></i><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} >> </span><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          
+          {% elsif post_count contains '4' %}
+            <h2><i class="fa fa-square post-mark fa-fw" style="color:#49C49F" aria-hidden="true"></i><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}  >> </span><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          
+          {% else %}
+            {% capture post_count %} {{ 0 }} {% endcapture %}
+          
+          {% endif %}
+          
+          
       </li>
     {% endfor %}
+      
   </ul>
   </div>
